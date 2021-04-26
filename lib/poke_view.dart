@@ -17,7 +17,9 @@ class _PokeViewState extends State<PokeView> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(onPressed: () {
+          Text('controller.pokemon'),
+          ElevatedButton(
+            onPressed: () {
             controller.loadPokemon();
           }, 
           child: Text('Load Pokemon'))
