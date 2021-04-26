@@ -1,5 +1,7 @@
+import 'api.dart';
+
 class PokeModel {
   fetchPokemon() {
-    print('Fetch Pokemon');
+    API().fetchPokemon();
   }
 }
