@@ -5,8 +5,8 @@ import 'package:pokemon/pokemon.dart';
 
 
 class API{
-  Future <Pokemon> fetchPokemon() async {
-    final response = await http.get(Uri.https('pokeapi.co', '/api/v2/pokemon/1'));
+  Future <Pokemon> fetchPokemon(int number) async {
+    final response = await http.get(Uri.https('pokeapi.co', '/api/v2/pokemon/$number'));
     
     if (response.statusCode == 200) {
       return Pokemon.fromJson(jsonDecode(response.body));
