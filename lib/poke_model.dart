@@ -8,7 +8,7 @@ class PokeModel {
 
   Future<Pokemon> get pokemon => _pokemon;
 
-  fetchPokemon() {
-    _pokemon = API().fetchPokemon();
+  fetchPokemon(int number) {
+    _pokemon = API().fetchPokemon(number);
   }
 }
