@@ -39,11 +39,18 @@ class _PokeViewState extends State<PokeView> {
                     snapshot.data.nome, 
                     style: TextStyle(
                       fontSize: 30, 
-                      color: Colors.red
+                      color: Colors.black
                     ),
                   )],
                 );
-              }
+              } else if (snapshot.hasError) {
+                return Text(
+                  snapshot.error, 
+                  style: TextStyle(
+                    fontSize: 18, 
+                    color: Colors.red,),
+                    );
+                }
               return Container();
             },
           ),
